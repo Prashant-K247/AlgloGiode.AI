@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "LC Mentor",
+    "version": "1.0",
+    "description":"A DSA mentor for leetcode which dont give solution directly rather it heps you learn through hints and timer to think",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["*://*.leetcode.com/problems/*"],
+    
+    "content_scripts": [
+  {
+    "matches": ["*://*.leetcode.com/problems/*"],
+    "js": ["content.js"]
+  }
+]
+
+
+}
