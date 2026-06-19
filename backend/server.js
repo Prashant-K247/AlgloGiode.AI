@@ -32,12 +32,10 @@ app.post("/ai", async (req, res) => {
       }
     );
 
-    // Extract clean text
-    const text =
-      response.data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "no response from ai";
+    // extract clean text
+    const text = response.data?.candidates?.[0]?.content?.parts?.[0]?.text ||"no response from ai";
 
-    res.json({ text });
+    res.json({text});
 
   } catch (error) {
     console.error("Gemini Error:", error.response?.data || error.message);
@@ -47,7 +45,6 @@ app.post("/ai", async (req, res) => {
     });
   }
 });
-
 
 const PORT = 5000;
 
